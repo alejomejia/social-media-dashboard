@@ -17,7 +17,7 @@ export const Root = styled.div`
   }
 
   & .Container {
-    &--wrapper {
+    &__wrapper {
       max-width: 1440px;
       min-height: 100vh;
       margin: 0 auto;

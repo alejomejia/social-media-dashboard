@@ -18,8 +18,8 @@ const Switch = ({ label }) => {
 
   return (
     <Root className="Switch" onClick={handleClick} isDarkMode={isDarkMode}>
-      <span className="Switch--label">{label}</span>
-      <div className="Switch--switcher"></div>
+      <span className="Switch__label">{label}</span>
+      <div className="Switch__switcher"></div>
     </Root>
   );
 };

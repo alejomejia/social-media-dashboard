@@ -8,8 +8,8 @@ import { Root } from './styles';
 const Container = ({ children }) => {
   return (
     <Root className="Container">
-      <div className="Container--wrapper">
-        <main className="Container--main">{children}</main>
+      <div className="Container__wrapper">
+        <main className="Container__main">{children}</main>
       </div>
     </Root>
   );

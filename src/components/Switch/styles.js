@@ -7,7 +7,7 @@ export const Root = styled.div`
 
   // Hover effect to change Switcher bg from static color to gradient
   &:hover {
-    & .Switch--switcher {
+    & .Switch__switcher {
       &:after {
         opacity: 1;
       }
@@ -15,7 +15,7 @@ export const Root = styled.div`
   }
 
   .Switch {
-    &--label {
+    &__label {
       font-size: 14px;
       font-weight: 600;
       margin-right: 16px;
@@ -28,7 +28,7 @@ export const Root = styled.div`
           : props.theme.colors.text};
     }
 
-    &--switcher {
+    &__switcher {
       position: relative;
       z-index: 1;
       overflow: hidden;

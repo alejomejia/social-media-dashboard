@@ -2,15 +2,15 @@
 import PropTypes from 'prop-types';
 
 // Importing elements from styles
-import { Root, Wrapper, Main } from './styles';
+import { Root } from './styles';
 
 // Making Container component
 const Container = ({ children }) => {
   return (
     <Root className="Container">
-      <Wrapper>
-        <Main>{children}</Main>
-      </Wrapper>
+      <div className="Container--wrapper">
+        <main className="Container--main">{children}</main>
+      </div>
     </Root>
   );
 };

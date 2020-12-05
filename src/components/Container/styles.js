@@ -15,12 +15,12 @@ export const Root = styled.div`
     border-radius: 0 0 20px 20px;
     transition: ${(props) => props.theme.transitions('background-color')};
   }
-`;
 
-export const Wrapper = styled.div`
-  max-width: 1440px;
-  min-height: 100vh;
-  margin: 0 auto;
+  & .Container {
+    &--wrapper {
+      max-width: 1440px;
+      min-height: 100vh;
+      margin: 0 auto;
+    }
+  }
 `;
-
-export const Main = styled.main``;

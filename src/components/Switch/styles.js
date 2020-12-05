@@ -35,6 +35,7 @@ export const Label = styled.span`
   font-size: 14px;
   font-weight: 600;
   margin-right: 16px;
+  transition: ${(props) => props.theme.transitions('color')};
 `;
 
 export const Switcher = styled.div`
@@ -50,6 +51,7 @@ export const Switcher = styled.div`
   &:before {
     content: '';
     position: absolute;
+    z-index: 5;
     top: calc(50% - 10px);
     left: 0;
     width: 20px;

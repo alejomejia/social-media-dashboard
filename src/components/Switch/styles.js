@@ -12,12 +12,28 @@ export const Root = styled.div`
       }
     }
   }
+
+  // Changes depending on Dark Mode
+  & .Switch--label {
+    color: ${(props) =>
+      props.isDarkMode
+        ? props.theme.colors.textHighlight
+        : props.theme.colors.text};
+  }
+
+  & .Switch--switcher {
+    &:before {
+      // Starting point 32px to 4px to move from right to left
+      transform: ${(props) =>
+        props.isDarkMode ? 'translateX(4px)' : 'translateX(32px)'};
+      transition: ${(props) => props.theme.transitions('transform')};
+    }
+  }
 `;
 
 export const Label = styled.span`
   font-size: 14px;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.text};
   margin-right: 16px;
 `;
 
@@ -40,10 +56,6 @@ export const Switcher = styled.div`
     height: 20px;
     background-color: #fff;
     border-radius: 50%;
-
-    // Starting point 32px to 4px to move from right to left
-    transform: translateX(32px);
-    transition: ${(props) => props.theme.transitions('transform')};
   }
 
   &:after {

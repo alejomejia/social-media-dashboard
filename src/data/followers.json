@@ -1,0 +1,37 @@
+{
+  "total": "23,004",
+  "data": [
+    {
+      "id": 1,
+      "social": "facebook",
+      "username": "@nathanf",
+      "followers": "1987",
+      "type": "up",
+      "today": "12"
+    },
+    {
+      "id": 2,
+      "social": "twitter",
+      "username": "@nathanf",
+      "followers": "1044",
+      "type": "up",
+      "today": "99"
+    },
+    {
+      "id": 3,
+      "social": "instagram",
+      "username": "@realnathanf",
+      "followers": "11k",
+      "type": "up",
+      "today": "1099"
+    },
+    {
+      "id": 4,
+      "social": "youtube",
+      "username": "Nathan F.",
+      "followers": "8239",
+      "type": "down",
+      "today": "144"
+    }
+  ]
+}

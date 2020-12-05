@@ -4,8 +4,8 @@ const global = {
     brightRed: 'hsl(356, 69%, 56%)',
   },
   brands: {
-    facebook: 'hsl(195, 100%, 50%)',
-    twitter: 'hsl(203, 89%, 53%)',
+    facebook: 'hsl(203, 89%, 53%)',
+    twitter: 'hsl(195, 100%, 50%)',
     instagram: 'linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)',
     youtube: 'hsl(348, 97%, 39%)',
   },

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Importing elements from styles
 import { Root } from './styles';
 
-// Making Container component
+// Making Header component
 const Header = ({ children }) => {
   return <Root className="Header">{children}</Root>;
 };

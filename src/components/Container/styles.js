@@ -13,7 +13,7 @@ export const Root = styled.div`
     height: 250px;
     background-color: ${(props) => props.theme.colors.backgroundTop};
     border-radius: 0 0 20px 20px;
-    transition: background-color 0.35s ease;
+    transition: ${(props) => props.theme.transitions('background-color')};
   }
 `;
 

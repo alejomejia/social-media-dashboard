@@ -23,7 +23,7 @@ const GlobalCSS = createGlobalStyle`
     font-family: 'Inter', 'Verdana', sans-serif;
     font-size: 16px;
     background-color: ${(props) => props.theme.colors.background};
-    transition: background-color .35s ease;
+    transition: ${(props) => props.theme.transitions('background-color')};
   }
 `;
 

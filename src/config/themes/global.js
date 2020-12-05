@@ -9,10 +9,6 @@ const global = {
     instagram: 'linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)',
     youtube: 'hsl(348, 97%, 39%)',
   },
-  radius: {
-    s: '10px',
-    m: '20px',
-  },
   transitions(prop) {
     return `${prop} .35s ease`;
   },

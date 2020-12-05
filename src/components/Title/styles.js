@@ -4,7 +4,7 @@ export const Root = styled.div`
   & h1 {
     color: ${(props) => props.theme.colors.textHighlight};
     font-size: 27px;
-    font-weight: 700;
+    font-weight: 600;
     transition: ${(props) => props.theme.transitions('color')};
   }
 

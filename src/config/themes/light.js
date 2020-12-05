@@ -8,6 +8,8 @@ const light = {
     textHighlight: 'hsl(230, 17%, 14%)',
     chart: 'hsl(243, 51%, 70%)',
     toggle: 'hsl(230, 22%, 74%)',
+    toggleHover:
+      'linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))',
   },
 };
 

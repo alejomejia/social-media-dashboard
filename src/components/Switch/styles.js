@@ -5,6 +5,10 @@ export const Root = styled.div`
   display: flex;
   align-items: center;
 
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+    margin-bottom: 20px;
+  }
+
   // Hover effect to change Switcher bg from static color to gradient
   &:hover {
     & .Switch__switcher {

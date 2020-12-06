@@ -8,6 +8,10 @@ export const Root = styled.div`
     // Changing with the theme
     color: ${(props) => props.theme.colors.textHighlight};
     transition: ${(props) => props.theme.transitions('color')};
+
+    @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+      font-size: 24px;
+    }
   }
 
   & h2 {
@@ -21,6 +25,10 @@ export const Root = styled.div`
         ? props.theme.colors.textHighlight
         : props.theme.colors.text};
     transition: ${(props) => props.theme.transitions('color')};
+
+    @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+      font-size: 21px;
+    }
   }
 
   & span {

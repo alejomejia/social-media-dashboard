@@ -65,6 +65,7 @@ export const Root = styled.article`
     &__social {
       display: flex;
       align-items: center;
+      min-height: 20px;
 
       &-wrapper {
         display: flex;

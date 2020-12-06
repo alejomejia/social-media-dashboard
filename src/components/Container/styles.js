@@ -11,8 +11,10 @@ export const Root = styled.div`
     z-index: -1;
     width: 100%;
     height: 250px;
-    background-color: ${(props) => props.theme.colors.backgroundTop};
     border-radius: 0 0 20px 20px;
+
+    // Changing with the theme
+    background-color: ${(props) => props.theme.colors.backgroundTop};
     transition: ${(props) => props.theme.transitions('background-color')};
   }
 
@@ -21,6 +23,7 @@ export const Root = styled.div`
       max-width: 1440px;
       min-height: 100vh;
       margin: 0 auto;
+      padding: 0 20px;
     }
   }
 `;

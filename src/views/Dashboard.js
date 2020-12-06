@@ -46,6 +46,9 @@ const Dashboard = () => {
           );
         })}
       </Section>
+      <Title>
+        <h2>Overview - Today</h2>
+      </Title>
     </Container>
   );
 };

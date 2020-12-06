@@ -8,16 +8,19 @@ import Title from '../components/Title';
 import Switch from '../components/Switch';
 import Section from '../components/Section';
 import BigCard from '../components/Cards/Big';
+import SmallCard from '../components/Cards/Small';
 
 // Importing transitions
 import FadeInUp from '../components/Transitions/FadeInUp';
 
 // Importing data
 import followers from '../data/followers.json';
+import overview from '../data/overview.json';
 
 const Dashboard = () => {
   // Getting data from the json file
   const FOLLOWERS_DATA = followers.data;
+  const OVERVIEW_DATA = overview;
 
   return (
     <Container>
@@ -49,6 +52,24 @@ const Dashboard = () => {
       <Title>
         <h2>Overview - Today</h2>
       </Title>
+      <Section>
+        {OVERVIEW_DATA.map((item, idx) => {
+          let delay = idx * 80;
+          return (
+            <Fragment key={item.id}>
+              <FadeInUp delay={delay}>
+                <SmallCard
+                  title={item.title}
+                  social={item.social}
+                  quantity={item.quantity}
+                  type={item.type}
+                  percent={item.percent}
+                />
+              </FadeInUp>
+            </Fragment>
+          );
+        })}
+      </Section>
     </Container>
   );
 };

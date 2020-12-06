@@ -141,7 +141,7 @@ export const Root = styled.article`
 
       &-quantity,
       &-text {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 600;
       }
     }

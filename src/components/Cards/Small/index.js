@@ -30,7 +30,7 @@ const SmallCard = ({ title, social, quantity, type, percent }) => {
               src={renderTypeIcon(type)}
               alt={`${type} icon`}
             />
-            <span className="SmallCard__type-text">Today</span>
+            <span className="SmallCard__type-percent">{percent}</span>
           </div>
         </div>
       </div>

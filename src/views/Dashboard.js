@@ -8,6 +8,9 @@ import Title from '../components/Title';
 import Switch from '../components/Switch';
 import BigCard from '../components/Cards/Big';
 
+// Importing transitions
+import FadeInUp from '../components/Transitions/FadeInUp';
+
 // Importing data
 import followers from '../data/followers.json';
 
@@ -31,17 +34,20 @@ const Dashboard = () => {
           gap: '40px',
         }}
       >
-        {FOLLOWERS_DATA.map((follower) => {
-          console.log(follower);
+        {FOLLOWERS_DATA.map((follower, idx) => {
+          let delay = idx * 80;
+
           return (
             <Fragment key={follower.id}>
-              <BigCard
-                social={follower.social}
-                username={follower.username}
-                followers={follower.followers}
-                type={follower.type}
-                today={follower.today}
-              />
+              <FadeInUp delay={delay}>
+                <BigCard
+                  social={follower.social}
+                  username={follower.username}
+                  followers={follower.followers}
+                  type={follower.type}
+                  today={follower.today}
+                />
+              </FadeInUp>
             </Fragment>
           );
         })}

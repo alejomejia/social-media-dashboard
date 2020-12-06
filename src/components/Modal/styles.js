@@ -142,5 +142,17 @@ export const Root = styled.section`
             : 'hsl(219deg 6% 49%)'};
       }
     }
+
+    &__date-range {
+      font-size: 21px;
+      font-weight: 400;
+      margin-bottom: 20px;
+
+      // Changing with the theme
+      color: ${(props) => props.theme.colors.text};
+    }
+
+    &__chart {
+    }
   }
 `;

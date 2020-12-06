@@ -1,7 +1,7 @@
 const global = {
-  colors: {
-    limeGreen: 'hsl(163, 72%, 41%)',
-    brightRed: 'hsl(356, 69%, 56%)',
+  palette: {
+    green: 'hsl(163, 72%, 41%)',
+    red: 'hsl(356, 69%, 56%)',
   },
   brands: {
     facebook: 'hsl(203, 89%, 53%)',

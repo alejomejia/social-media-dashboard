@@ -1,4 +1,5 @@
 // Importing from packages
+import { useStoreActions } from 'easy-peasy';
 import PropTypes from 'prop-types';
 
 // Importing from services
@@ -9,8 +10,16 @@ import { Root } from './styles';
 
 // Making SmallCard component
 const SmallCard = ({ title, social, quantity, type, percent }) => {
+  // Getting action from global store to open modal
+  const handleModalOpen = useStoreActions((actions) => actions.handleModalOpen);
+
+  // Changing modal value in the global store to open
+  const handleClick = () => {
+    handleModalOpen(true);
+  };
+
   return (
-    <Root className="SmallCard">
+    <Root className="SmallCard" onClick={handleClick}>
       <div className="SmallCard__wrapper">
         <div className="SmallCard__header">
           <h3 className="SmallCard__header-title">{title}</h3>

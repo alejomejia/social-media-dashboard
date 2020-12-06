@@ -6,7 +6,7 @@ const global = {
   brands: {
     facebook: 'hsl(203, 89%, 53%)',
     twitter: 'hsl(195, 100%, 50%)',
-    instagram: 'linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)',
+    instagram: 'linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
     youtube: 'hsl(348, 97%, 39%)',
   },
   transitions(prop) {

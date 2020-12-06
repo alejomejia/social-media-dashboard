@@ -13,7 +13,7 @@ import Dashboard from './views/Dashboard';
 
 function App() {
   // Getting state from global store
-  const isDarkMode = useStoreState((state) => state.isDarkMode);
+  let isDarkMode = useStoreState((state) => state.isDarkMode);
 
   return (
     <ThemeProvider theme={GLOBAL}>

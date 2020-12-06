@@ -6,6 +6,7 @@ import Container from '../components/Container';
 import Header from '../components/Header';
 import Title from '../components/Title';
 import Switch from '../components/Switch';
+import Section from '../components/Section';
 import BigCard from '../components/Cards/Big';
 
 // Importing transitions
@@ -27,16 +28,9 @@ const Dashboard = () => {
         </Title>
         <Switch label="Dark Mode" />
       </Header>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          gap: '40px',
-        }}
-      >
+      <Section>
         {FOLLOWERS_DATA.map((follower, idx) => {
           let delay = idx * 80;
-
           return (
             <Fragment key={follower.id}>
               <FadeInUp delay={delay}>
@@ -51,7 +45,7 @@ const Dashboard = () => {
             </Fragment>
           );
         })}
-      </div>
+      </Section>
     </Container>
   );
 };

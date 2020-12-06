@@ -1,53 +1,18 @@
 // Importing from packages
 import PropTypes from 'prop-types';
 
-// Importing icons
-import iconFacebook from '../../../assets/icon-facebook.svg';
-import iconTwitter from '../../../assets/icon-twitter.svg';
-import iconInstagram from '../../../assets/icon-instagram.svg';
-import iconYoutube from '../../../assets/icon-youtube.svg';
-import iconUp from '../../../assets/icon-up.svg';
-import iconDown from '../../../assets/icon-down.svg';
+// Importing from services
+import {
+  renderSocialIcon,
+  renderFollowersText,
+  renderTypeIcon,
+} from '../../../services/';
 
 // Importing elements from styles
 import { Root } from './styles';
 
-// Making Header component
+// Making BigCard component
 const BigCard = ({ social, username, followers, type, today }) => {
-  // Condition to render the icon depending on social string
-  const renderSocialIcon = (social) => {
-    switch (social) {
-      case 'facebook':
-        return iconFacebook;
-      case 'twitter':
-        return iconTwitter;
-      case 'instagram':
-        return iconInstagram;
-      case 'youtube':
-        return iconYoutube;
-      default:
-        console.error('No social string valid.');
-    }
-  };
-
-  // Condition to render the icon depending on social string
-  const renderFollowersText = (social) => {
-    if (social === 'youtube') {
-      return 'Subscribers';
-    } else {
-      return 'Followers';
-    }
-  };
-
-  // Condition to render icon type (up / green or down  / red)
-  const renderTypeIcon = (type) => {
-    if (type === 'up') {
-      return iconUp;
-    } else {
-      return iconDown;
-    }
-  };
-
   return (
     <Root className={`BigCard BigCard--${social}`}>
       <div className="BigCard__wrapper">

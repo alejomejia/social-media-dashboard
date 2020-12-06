@@ -41,6 +41,10 @@ export const Root = styled.section`
 
         &-icon {
           max-width: 12px;
+
+          // Changing with the theme
+          filter: ${(props) =>
+            props.theme.title === 'dark' ? 'invert(1)' : 'initial'};
         }
       }
       &-header {

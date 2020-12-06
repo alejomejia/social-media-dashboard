@@ -1,6 +1,6 @@
 // Importing from packages
 import PropTypes from 'prop-types';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated, config } from 'react-spring';
 
 // Importing elements from styles
 import { Root } from './styles';
@@ -14,9 +14,7 @@ const FadeInUp = ({ delay = 50, children }) => {
   const props = useSpring({
     from: { opacity: 0, transform: 'translateY(50px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
-    config: {
-      duration: 350,
-    },
+    config: config.gentle,
     delay,
   });
 

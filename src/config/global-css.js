@@ -31,6 +31,10 @@ const GlobalCSS = createGlobalStyle`
   button{
     border: 0;
     background-color: inherit;
+    
+    &:focus{
+      outline: 0;
+    }
   }
 `;
 

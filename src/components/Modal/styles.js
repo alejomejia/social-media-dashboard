@@ -28,13 +28,17 @@ export const Root = styled.section`
 
       &-close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 10px;
 
         &-button {
+          cursor: pointer;
+          display: flex;
+          padding: 20px;
         }
 
         &-icon {
+          max-width: 12px;
         }
       }
       &-header {

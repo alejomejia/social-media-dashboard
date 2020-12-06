@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 // Importing from services
 import { renderSocialIcon, renderTypeIcon } from '../../services/';
 
+// Importing close icon from assets
+import iconClose from '../../assets/icon-close.svg';
+
 // Importing elements from styles
 import { Root } from './styles';
 
@@ -16,8 +19,12 @@ const Modal = ({ open = false }) => {
           <div className="Modal__container">
             <div className="Modal__card">
               <div className="Modal__card-close">
-                <button className="Modal__close-button">
-                  <span className="Modal__close-icon">x</span>
+                <button className="Modal__card-close-button">
+                  <img
+                    className="Modal__card-close-icon"
+                    src={iconClose}
+                    alt="close icon"
+                  />
                 </button>
               </div>
               <div className="Modal__card-header">

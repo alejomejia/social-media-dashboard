@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Root = styled.article`
   &.SmallCard {
     cursor: pointer;
+    margin-bottom: 25px;
 
     // Hover effect
     transform: translateY(0);

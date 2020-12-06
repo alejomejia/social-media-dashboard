@@ -4,6 +4,7 @@ export const Root = styled.article`
   &.BigCard {
     cursor: pointer;
     flex: 1;
+    margin-bottom: 25px;
 
     // Hover effect
     transform: translateY(0);

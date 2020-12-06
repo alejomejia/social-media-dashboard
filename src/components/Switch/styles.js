@@ -72,5 +72,3 @@ export const Root = styled.div`
     }
   }
 `;
-
-export const Switcher = styled.div``;

@@ -3,7 +3,7 @@ import { useStoreState, useStoreActions } from 'easy-peasy';
 import PropTypes from 'prop-types';
 
 // Importing elements from styles
-import { Root, Label, Switcher } from './styles';
+import { Root } from './styles';
 
 // Making Switch component
 const Switch = ({ label }) => {

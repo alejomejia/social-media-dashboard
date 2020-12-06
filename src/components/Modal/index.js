@@ -28,7 +28,7 @@ const Modal = ({ open = false }) => {
                 </button>
               </div>
               <div className="Modal__card-header">
-                <h3 className="Modal__title">Facebook Followers</h3>
+                <h3 className="Modal__title">Facebook followers</h3>
                 <div className="Modal__social">
                   <img
                     className="Modal__social-icon"

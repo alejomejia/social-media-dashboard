@@ -1,4 +1,5 @@
 // Importing from packages
+import { useStoreActions } from 'easy-peasy';
 import PropTypes from 'prop-types';
 
 // Importing from services
@@ -12,6 +13,14 @@ import { Root } from './styles';
 
 // Making Modal component
 const Modal = ({ open = false }) => {
+  // Getting action from global store to close modal when is open
+  const handleModalOpen = useStoreActions((actions) => actions.handleModalOpen);
+
+  // Changing modal value in the global store to open
+  const handleClick = () => {
+    handleModalOpen(false);
+  };
+
   return (
     <>
       {open && (
@@ -19,7 +28,10 @@ const Modal = ({ open = false }) => {
           <div className="Modal__container">
             <div className="Modal__card">
               <div className="Modal__card-close">
-                <button className="Modal__card-close-button">
+                <button
+                  className="Modal__card-close-button"
+                  onClick={handleClick}
+                >
                   <img
                     className="Modal__card-close-icon"
                     src={iconClose}

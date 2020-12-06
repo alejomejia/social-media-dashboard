@@ -9,6 +9,7 @@ import Switch from '../components/Switch';
 import Section from '../components/Section';
 import BigCard from '../components/Cards/Big';
 import SmallCard from '../components/Cards/Small';
+import Modal from '../components/Modal';
 
 // Importing transitions
 import FadeInUp from '../components/Transitions/FadeInUp';
@@ -70,6 +71,7 @@ const Dashboard = () => {
           );
         })}
       </Section>
+      <Modal open={true} />
     </Container>
   );
 };

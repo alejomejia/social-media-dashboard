@@ -5,5 +5,5 @@ export const Root = styled.section`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0 30px;
-  margin-bottom: 50px;
+  padding-bottom: 30px;
 `;

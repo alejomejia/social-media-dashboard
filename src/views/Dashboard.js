@@ -1,5 +1,6 @@
 // Importing from packages
 import { Fragment } from 'react';
+import { useStoreState } from 'easy-peasy';
 
 // Importing components
 import Container from '../components/Container';
@@ -22,6 +23,9 @@ const Dashboard = () => {
   // Getting data from the json file
   const FOLLOWERS_DATA = followers.data;
   const OVERVIEW_DATA = overview;
+
+  // Getting state from global store to open modal
+  const isModalOpen = useStoreState((state) => state.isModalOpen);
 
   return (
     <Container>
@@ -71,7 +75,7 @@ const Dashboard = () => {
           );
         })}
       </Section>
-      <Modal open={true} />
+      <Modal open={isModalOpen} />
     </Container>
   );
 };

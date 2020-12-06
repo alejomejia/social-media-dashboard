@@ -1,4 +1,5 @@
 // Importing from packages
+import { useStoreActions } from 'easy-peasy';
 import PropTypes from 'prop-types';
 
 // Importing from services
@@ -13,8 +14,16 @@ import { Root } from './styles';
 
 // Making BigCard component
 const BigCard = ({ social, username, followers, type, today }) => {
+  // Getting action from global store to open modal
+  const handleModalOpen = useStoreActions((actions) => actions.handleModalOpen);
+
+  // Changing modal value in the global store to open
+  const handleClick = () => {
+    handleModalOpen(true);
+  };
+
   return (
-    <Root className={`BigCard BigCard--${social}`}>
+    <Root className={`BigCard BigCard--${social}`} onClick={handleClick}>
       <div className="BigCard__wrapper">
         <div className="BigCard__social">
           <div className="BigCard__social-wrapper">

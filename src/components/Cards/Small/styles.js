@@ -17,6 +17,11 @@ export const Root = styled.article`
         background-color: ${(props) => props.theme.colors.cardBgHover};
       }
     }
+
+    // Smartphones
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      margin-bottom: 15px;
+    }
   }
 
   .SmallCard {

@@ -36,7 +36,7 @@ const Dashboard = () => {
         </Title>
         <Switch label="Dark Mode" />
       </Header>
-      <Section>
+      <Section l={4} m={2} s={2} xs={1}>
         {FOLLOWERS_DATA.map((follower, idx) => {
           let delay = idx * 80;
           return (
@@ -57,7 +57,7 @@ const Dashboard = () => {
       <Title>
         <h2>Overview - Today</h2>
       </Title>
-      <Section>
+      <Section l={4} m={2} s={2} xs={2} xxs={1}>
         {OVERVIEW_DATA.map((item, idx) => {
           let delay = idx * 80;
           return (

@@ -48,6 +48,11 @@ export const Root = styled.article`
         background-color: ${(props) => props.theme.brands.youtube};
       }
     }
+
+    // Smartphones
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      margin-bottom: 15px;
+    }
   }
 
   .BigCard {
@@ -61,6 +66,11 @@ export const Root = styled.article`
       // Changing with the theme and on hover
       background-color: ${(props) => props.theme.colors.cardBg};
       transition: ${(props) => props.theme.transitions('background-color')};
+
+      // Smartphones
+      @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+        padding: 15px;
+      }
     }
 
     &__social {

@@ -17,6 +17,7 @@ const global = {
     m: '1024px',
     s: '768px',
     xs: '550px',
+    xxs: '420px',
   },
 };
 

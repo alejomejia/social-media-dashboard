@@ -20,11 +20,16 @@ export const Root = styled.section`
       // Smartphones
       @media (max-width: ${(props) => props.theme.breakpoints.s}) {
         grid-template-columns: repeat(${(props) => props.s}, 1fr);
+        margin: 0 -7.5px;
       }
 
       // Small phones
       @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
         grid-template-columns: repeat(${(props) => props.xs}, 1fr);
+      }
+
+      @media (max-width: ${(props) => props.theme.breakpoints.xxs}) {
+        grid-template-columns: repeat(${(props) => props.xxs}, 1fr);
       }
     }
   }

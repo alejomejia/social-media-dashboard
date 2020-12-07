@@ -3,6 +3,9 @@ import { useStoreActions } from 'easy-peasy';
 import PropTypes from 'prop-types';
 
 // Importing transitions
+import LineChart from '../LineChart';
+
+// Importing transitions
 import FadeInUp from '../Transitions/FadeInUp';
 
 // Importing from services
@@ -94,7 +97,9 @@ const Modal = ({ open = false }) => {
                   <div className="Modal__date">
                     <h4 className="Modal__date-range">May 4 - May 13</h4>
                   </div>
-                  <div className="Modal__chart">CHART HERE</div>
+                  <div className="Modal__chart">
+                    <LineChart />
+                  </div>
                 </div>
               </div>
             </div>

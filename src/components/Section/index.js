@@ -5,12 +5,20 @@ import PropTypes from 'prop-types';
 import { Root } from './styles';
 
 // Making Section component
-const Section = ({ children }) => {
-  return <Root className="Section">{children}</Root>;
+const Section = ({ children, l = 4, m = 4, s = 2, xs = 1 }) => {
+  return (
+    <Root className="Section" l={l} m={m} s={s} xs={xs}>
+      <div className="Section__row">{children}</div>
+    </Root>
+  );
 };
 
 // Adding proptypes to component
 Section.propTypes = {
+  l: PropTypes.number,
+  m: PropTypes.number,
+  s: PropTypes.number,
+  xs: PropTypes.number,
   children: PropTypes.node.isRequired,
 };
 

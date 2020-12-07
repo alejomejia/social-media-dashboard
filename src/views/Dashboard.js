@@ -1,5 +1,4 @@
 // Importing from packages
-import { Fragment } from 'react';
 import { useStoreState } from 'easy-peasy';
 
 // Importing components
@@ -8,6 +7,7 @@ import Header from '../components/Header';
 import Title from '../components/Title';
 import Switch from '../components/Switch';
 import Section from '../components/Section';
+import Column from '../components/Column';
 import BigCard from '../components/Cards/Big';
 import SmallCard from '../components/Cards/Small';
 import Modal from '../components/Modal';
@@ -40,7 +40,7 @@ const Dashboard = () => {
         {FOLLOWERS_DATA.map((follower, idx) => {
           let delay = idx * 80;
           return (
-            <Fragment key={follower.id}>
+            <Column key={follower.id}>
               <FadeInUp delay={delay}>
                 <BigCard
                   social={follower.social}
@@ -50,7 +50,7 @@ const Dashboard = () => {
                   today={follower.today}
                 />
               </FadeInUp>
-            </Fragment>
+            </Column>
           );
         })}
       </Section>
@@ -61,7 +61,7 @@ const Dashboard = () => {
         {OVERVIEW_DATA.map((item, idx) => {
           let delay = idx * 80;
           return (
-            <Fragment key={item.id}>
+            <Column key={item.id}>
               <FadeInUp delay={delay}>
                 <SmallCard
                   title={item.title}
@@ -71,7 +71,7 @@ const Dashboard = () => {
                   percent={item.percent}
                 />
               </FadeInUp>
-            </Fragment>
+            </Column>
           );
         })}
       </Section>

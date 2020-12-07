@@ -27,7 +27,7 @@ export const Root = styled.div`
 
       // Changes depending on Dark Mode
       color: ${(props) =>
-        props.isDarkMode
+        props.theme.title === 'dark'
           ? props.theme.colors.textHighlight
           : props.theme.colors.text};
     }
@@ -55,7 +55,9 @@ export const Root = styled.div`
 
         // Starting point 32px to 4px to move from right to left
         transform: ${(props) =>
-          props.isDarkMode ? 'translateX(4px)' : 'translateX(32px)'};
+          props.theme.title === 'dark'
+            ? 'translateX(4px)'
+            : 'translateX(32px)'};
         transition: ${(props) => props.theme.transitions('transform')};
       }
 

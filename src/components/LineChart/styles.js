@@ -10,7 +10,25 @@ export const Root = styled.div`
   // Add theme chart color to active dots in the chart
   .recharts-active-dot {
     .recharts-dot {
+      // Changing with the theme
       stroke: ${(props) => props.theme.colors.chart};
+      fill: ${(props) => props.theme.colors.chart};
+    }
+  }
+
+  // Recharts theme line
+  .recharts-line {
+    &-curve {
+      // Changing with the theme
+      stroke: ${(props) => props.theme.colors.chart};
+    }
+
+    &-dots {
+      circle {
+        // Changing with the theme
+        stroke: ${(props) => props.theme.colors.chart};
+        fill: ${(props) => props.theme.colors.background};
+      }
     }
   }
 
@@ -30,11 +48,27 @@ export const Root = styled.div`
     &-wrapper {
       .recharts-default-tooltip {
         padding: 4px 10px !important;
+
+        // Changing with the theme
+        background-color: ${(props) =>
+          props.theme.colors.background} !important;
+        border-color: ${(props) =>
+          props.theme.title === 'dark'
+            ? props.theme.colors.chart
+            : '#ccc'} !important;
       }
     }
 
     &-item-list {
       font-size: 13px;
+      color: red;
+    }
+
+    &-item {
+      span {
+        // Changing with the theme
+        color: ${(props) => props.theme.colors.chart};
+      }
     }
   }
 

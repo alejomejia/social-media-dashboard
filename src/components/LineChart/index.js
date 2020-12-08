@@ -39,7 +39,6 @@ const LineChart = () => {
           <Line
             type="monotone"
             dataKey="followers"
-            stroke="hsl(243, 51%, 70%)"
             strokeWidth={1.5}
             dot={{ r: 5 }}
             activeDot={{ r: 7 }}

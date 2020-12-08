@@ -7,6 +7,7 @@ export const Root = styled.div`
     overflow: visible;
   }
 
+  // Add theme chart color to active dots in the chart
   .recharts-active-dot {
     .recharts-dot {
       stroke: ${(props) => props.theme.colors.chart};
@@ -21,6 +22,7 @@ export const Root = styled.div`
       display: none;
     }
 
+    // Removing hover effect on the CartesianGrid vertical lines
     &-cursor {
       stroke-width: 0;
     }
@@ -36,7 +38,7 @@ export const Root = styled.div`
     }
   }
 
-  // X and Y axis increase stroke and change color
+  // X and Y axis base line increase stroke and change color
   .recharts-cartesian {
     &-axis {
       .recharts-cartesian-axis-ticks {
@@ -45,7 +47,7 @@ export const Root = styled.div`
         }
       }
 
-      // Removing xAxis 0
+      // Removing xAxis first label (0)
       &.xAxis {
         .recharts-cartesian-axis-ticks {
           g {

@@ -2,6 +2,7 @@
 import React from 'react';
 
 import {
+  ResponsiveContainer,
   LineChart as ReactLineChart,
   Line,
   XAxis,
@@ -23,26 +24,28 @@ const LineChart = () => {
 
   return (
     <Root className="LineChart">
-      <ReactLineChart width={870} height={240} data={data}>
-        <XAxis tickCount={1} tickSize={15} tickLine={false} dataKey="days" />
-        <YAxis
-          width={25}
-          tickSize={10}
-          ticks={setYAxisTicks}
-          minTickGap={10}
-          tickLine={false}
-        />
-        <CartesianGrid strokeDasharray="3 3" />
-        <Tooltip formatter={(value, name) => `${value} new ${name}`} />
-        <Line
-          type="monotone"
-          dataKey="followers"
-          stroke="hsl(243, 51%, 70%)"
-          strokeWidth={1.5}
-          dot={{ r: 5 }}
-          activeDot={{ r: 7 }}
-        />
-      </ReactLineChart>
+      <ResponsiveContainer aspect={3.5}>
+        <ReactLineChart data={data}>
+          <XAxis tickCount={1} tickSize={15} tickLine={false} dataKey="days" />
+          <YAxis
+            width={25}
+            tickSize={10}
+            ticks={setYAxisTicks}
+            minTickGap={10}
+            tickLine={false}
+          />
+          <CartesianGrid strokeDasharray="3 3" />
+          <Tooltip formatter={(value, name) => `${value} new ${name}`} />
+          <Line
+            type="monotone"
+            dataKey="followers"
+            stroke="hsl(243, 51%, 70%)"
+            strokeWidth={1.5}
+            dot={{ r: 5 }}
+            activeDot={{ r: 7 }}
+          />
+        </ReactLineChart>
+      </ResponsiveContainer>
     </Root>
   );
 };

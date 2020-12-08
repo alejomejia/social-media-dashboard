@@ -54,6 +54,18 @@ export const Root = styled.section`
             props.theme.title === 'dark' ? 'invert(1)' : 'initial'};
         }
       }
+
+      // Wrapper to allow scroll on low height viewports
+      &-wrapper {
+        overflow-y: scroll;
+        border-radius: 16px;
+
+        // Smartphones
+        @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+          max-height: calc(100vh - 80px);
+        }
+      }
+
       &-header {
         padding: 40px 60px 20px;
 

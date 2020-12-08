@@ -103,7 +103,8 @@ export const Root = styled.div`
       &-vertical {
         // Changing color of the dashed grid lines inside CartesianGrid
         & line {
-          stroke: #dbdbdb;
+          stroke: ${(props) =>
+            props.theme.title === 'dark' ? '#5d5f63' : '#dbdbdb'} !important;
 
           // Removing first dash line on both axis to avoid overlap in main axis
           &:first-child {

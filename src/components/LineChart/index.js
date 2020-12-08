@@ -24,7 +24,7 @@ const LineChart = () => {
 
   return (
     <Root className="LineChart">
-      <ResponsiveContainer aspect={3.5}>
+      <ResponsiveContainer width="100%" height={250}>
         <ReactLineChart data={data}>
           <XAxis tickCount={1} tickSize={15} tickLine={false} dataKey="days" />
           <YAxis

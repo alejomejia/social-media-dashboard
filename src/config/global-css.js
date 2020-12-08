@@ -26,6 +26,12 @@ const GlobalCSS = createGlobalStyle`
     // Changing with the theme
     background-color: ${(props) => props.theme.colors.background};
     transition: ${(props) => props.theme.transitions('background-color')};
+
+    // When modal is open disable scroll on the entire page
+    &.modal-open{
+      overflow: hidden;
+      max-height: 100vh;
+    }
   }
 
   button{

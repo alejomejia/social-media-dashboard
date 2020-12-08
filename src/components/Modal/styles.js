@@ -15,9 +15,16 @@ export const Root = styled.section`
     &__container {
       display: flex;
       align-items: center;
-      max-width: 990px;
+      max-width: 1030px;
       height: 100%;
+      padding: 0 20px;
       margin: 0 auto;
+
+      // Tablets
+      @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+        align-items: flex-start;
+        padding: 40px 20px;
+      }
     }
 
     &__card {
@@ -49,6 +56,11 @@ export const Root = styled.section`
       }
       &-header {
         padding: 40px 60px 20px;
+
+        // Smartphones
+        @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+          padding: 30px 30px 20px;
+        }
       }
       &-body {
         padding: 40px 60px;
@@ -56,6 +68,11 @@ export const Root = styled.section`
 
         // Changing with the theme
         background-color: ${(props) => props.theme.colors.background};
+
+        // Smartphones
+        @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+          padding: 30px;
+        }
       }
     }
 

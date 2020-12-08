@@ -13,6 +13,29 @@ export const Root = styled.div`
     }
   }
 
+  // Styling tooltip to match design
+  .recharts-tooltip {
+    &-label,
+    &-item-name,
+    &-item-separator {
+      display: none;
+    }
+
+    &-cursor {
+      stroke-width: 0;
+    }
+
+    &-wrapper {
+      .recharts-default-tooltip {
+        padding: 4px 10px !important;
+      }
+    }
+
+    &-item-list {
+      font-size: 13px;
+    }
+  }
+
   // X and Y axis increase stroke and change color
   .recharts-cartesian {
     &-axis {

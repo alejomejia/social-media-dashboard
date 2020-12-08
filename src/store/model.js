@@ -8,7 +8,7 @@ const detectDarkMode = window.matchMedia('(prefers-color-scheme: dark)')
 const model = {
   // State
   isDarkMode: detectDarkMode,
-  isModalOpen: false,
+  isModalOpen: true,
   // Actions
   handleTheme: action((state, payload) => {
     state.isDarkMode = payload;

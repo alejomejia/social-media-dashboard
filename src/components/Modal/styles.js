@@ -57,6 +57,7 @@ export const Root = styled.section`
 
       // Wrapper to allow scroll on low height viewports
       &-wrapper {
+        overflow-x: hidden;
         overflow-y: scroll;
         border-radius: 16px;
 
@@ -96,6 +97,7 @@ export const Root = styled.section`
       // Changing with the theme
       color: ${(props) => props.theme.colors.textHighlight};
 
+      // xs Smartphones
       @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
         font-size: 24px;
       }
@@ -105,6 +107,11 @@ export const Root = styled.section`
       display: flex;
       align-items: center;
       margin-bottom: 40px;
+
+      // Smartphones
+      @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+        margin-bottom: 20px;
+      }
 
       &-icon {
         margin-right: 10px;
@@ -123,13 +130,28 @@ export const Root = styled.section`
     &__data {
       display: flex;
 
+      // Smartphones
+      @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+        flex-wrap: wrap;
+      }
+
       &-item {
         display: flex;
         align-items: center;
         max-width: 200px;
 
+        // Smartphones
+        @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+          max-width: 100%;
+        }
+
         &:first-child {
           width: 180px;
+
+          // Smartphones
+          @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+            width: inherit;
+          }
         }
 
         &:not(:last-child) {
@@ -162,6 +184,11 @@ export const Root = styled.section`
             props.theme.title === 'dark'
               ? props.theme.colors.textHighlight
               : 'hsl(219 12% 44%)'};
+
+          // Smartphones
+          @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+            font-size: 36px;
+          }
         }
       }
 

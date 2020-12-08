@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import PropTypes from 'prop-types';
 
-// Importing transitions
+// Importing components
 import LineChart from '../LineChart';
 
 // Importing transitions

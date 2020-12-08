@@ -1,0 +1,13 @@
+[
+  { "days": "0", "day": 0, "followers": 4 },
+  { "days": "4", "day": 4, "followers": 3 },
+  { "days": "5", "day": 5, "followers": 2 },
+  { "days": "6", "day": 6, "followers": 6 },
+  { "days": "7", "day": 7, "followers": 8 },
+  { "days": "8", "day": 8, "followers": 9 },
+  { "days": "9", "day": 9, "followers": 10 },
+  { "days": "10", "day": 10, "followers": 9 },
+  { "days": "11", "day": 11, "followers": 10 },
+  { "days": "12", "day": 12, "followers": 12 },
+  { "days": "13", "day": 13, "followers": 12 }
+]

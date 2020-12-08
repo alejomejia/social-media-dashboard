@@ -1,5 +1,6 @@
 // Importing from packages
-import { useStoreActions } from 'easy-peasy';
+import { useEffect } from 'react';
+import { useStoreState, useStoreActions } from 'easy-peasy';
 import PropTypes from 'prop-types';
 
 // Importing transitions
@@ -19,13 +20,26 @@ import { Root } from './styles';
 
 // Making Modal component
 const Modal = ({ open = false }) => {
-  // Getting action from global store to close modal when is open
+  // Getting state and action from global store
+  const isModalOpen = useStoreState((state) => state.isModalOpen);
   const handleModalOpen = useStoreActions((actions) => actions.handleModalOpen);
 
-  // Changing modal value in the global store to open
+  // Changing modal value in the global store to close
   const handleClick = () => {
     handleModalOpen(false);
   };
+
+  // Add body class to know when modal is open
+  const addBodyModalOpenClass = (isOpen) => {
+    isOpen
+      ? document.body.classList.add('modal-open')
+      : document.body.classList.remove('modal-open');
+  };
+
+  // Trigger Modal body class function every time isModalOpen store change
+  useEffect(() => {
+    addBodyModalOpenClass(isModalOpen);
+  });
 
   return (
     <>

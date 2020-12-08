@@ -46,10 +46,10 @@ const LineChart = () => {
         <Line
           type="monotone"
           dataKey="followers"
-          stroke="#8884d8"
+          stroke="hsl(243, 51%, 70%)"
           strokeWidth={1.5}
-          dot={{ r: 6 }}
-          activeDot={{ r: 6 }}
+          dot={{ r: 5 }}
+          activeDot={{ r: 5 }}
         />
       </ReactLineChart>
     </Root>

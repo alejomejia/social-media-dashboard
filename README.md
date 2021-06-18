@@ -6,7 +6,7 @@ Social Media Dashboard using [Create React App](https://github.com/facebook/crea
 
 ## Features
 
-- Cool animation effects with [React Spring](https://www.react-spring.io/) ✨
+- Cool animation effects and microinteractions with [React Spring](https://www.react-spring.io/) ✨
 - Dark Mode and general styles with [Styled Components](https://styled-components.com/) 💅
 - Graphic chart with [Recharts](https://recharts.org/) 📊
 - Props check with [Prop Types](https://www.npmjs.com/package/prop-types) ✔️

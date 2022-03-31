@@ -58,12 +58,12 @@ export const Root = styled.section`
       // Wrapper to allow scroll on low height viewports
       &-wrapper {
         overflow-x: hidden;
-        overflow-y: scroll;
         border-radius: 16px;
 
         // Smartphones
         @media (max-width: ${(props) => props.theme.breakpoints.s}) {
           max-height: calc(100vh - 80px);
+          overflow-y: scroll;
         }
       }
 
